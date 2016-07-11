@@ -1,4 +1,8 @@
 .form-inline.clearfix
 	.nested-fields
-		= f.input :step, input_html: { class: "form-input form-control" }
-		= link_to_remove_association "Remove Step", f, class: "form-button btn btn-default"
+		.row
+			.col-md-12
+				.form-group
+					= f.input :step, label: "Instrução", input_html: { class: "form-control", rows: "2", cols: "50" }
+					%br
+					= link_to_remove_association "Remover instrução", f, class: "btn btn-default"
